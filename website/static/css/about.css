@@ -1,0 +1,40 @@
+h1 {
+    margin-left: 5rem;
+    margin-right: 5rem;
+}
+ 
+.about h2 {
+    text-align: left;
+    margin-left: 7rem;
+    margin-right: 7rem;
+}
+
+.about h1 {
+    margin-bottom: 3rem;
+}
+
+.about h2 {
+    font-size: 2rem;
+    margin-top: 1.5rem;
+}
+
+.about p {
+    color: #907fad;
+    text-align: left;
+    margin-left: 7rem;
+    margin-right: 7rem;
+}
+
+.about h3 {
+    color: #909fad;
+    text-align: left;
+    margin-left: 7rem;
+    margin-top: 0.7rem;
+}
+
+@media screen and (max-width: 768px) {
+    .about h1, .about h2, .about h3, .about p {
+        margin-left: 3rem;
+        margin-right: 3rem;
+    }
+}

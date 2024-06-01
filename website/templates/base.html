@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{% block title %}thebugshub{% endblock %}</title>
+    <link rel="icon" sizes="16x16" href="{{ url_for('static', filename='media/favicon16.png') }}">
+    <link rel="icon" sizes="32x32" href="{{ url_for('static', filename='media/favicon32.png') }}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ url_for('static', filename='media/favicon.ico') }}">
+    <link
+      rel="stylesheet"
+      href="{{ url_for ('static', filename='css/base.css') }}"
+    />
+  </head>
+
+  <body>
+
+    <nav class="navbar">
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+      <a href="/events">Events</a>
+      <a href="/wallets">Wallets</a>
+      <a href="/servers">Servers</a>
+      <a href="/stoke">Stoke Bot</a>
+    </nav>
+
+    <div class="container">{% block content %} {% endblock %}</div>
+
+    <footer>
+      <div class="footer_container">
+        <div class="footer_left">
+          <h3>bugs</h3>
+          <a href="/contact">Contact Us</a>
+          <a href="/creator">The Creator</a>
+          <a href="/fund">Fund Us</a>
+        </div>
+
+        <div class="footer_center">
+          <a href="/">
+            <img
+              class="the_bugs"
+              src="{{ url_for ('static', filename='media/the_bugs.png') }}"
+            />
+          </a>
+          <p>The Hub of Casual Competitive Gaming</p>
+        </div>
+
+        <div class="footer_right">
+          <h3>Socials</h3>
+          <ul>
+            <li>
+              <a href="https://discord.gg/SQcCRGAnPR" target="_blank" rel="noopener norefereer"
+                >Discord</a
+              >
+            </li>
+            <li>
+              <a href="https://twitter.com/thebugshub" target="_blank" rel="noopener norefereer"
+                >X</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.youtube.com/channel/UCGK9PGnWi46OqwJFttJ5Vtw"
+                target="_blank" rel="noopener norefereer"
+                >YouTube</a
+              >
+            </li>
+            <li>
+              <a href="https://www.instagram.com/thebugshub/" target="_blank" rel="noopener norefereer"
+                >Instagram</a
+              >
+            </li>
+            <li>
+              <a href="https://github.com/purplestoke/Purples-Public-Key" target="_blank" rel="noopener norefereer">GitHub</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

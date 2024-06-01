@@ -1,0 +1,36 @@
+{% extends "base.html" %} {% block title%}thebugshub-Contact{% endblock %} {% block content%}
+{% block stylesheets %}
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="{{ url_for ('static', filename='css/contact.css') }}"
+/>
+{% endblock %}
+<h1>Contact Page</h1>
+<p class="contactP">
+  Interested more about what bugs can do for you and your community? Feel free
+  to contact me using the information below.
+</p>
+<div class="contacts">
+  <div>
+    <h2>Social Media</h2>
+    <p>Reach out to me on social media.</p>
+    <div class="contactSocials">
+      <a href="https://www.instagram.com/purplestoke/?hl=en" target="_blank" rel="noopener norefereer"
+        >Instagram</a
+      >
+      <a href="https://twitter.com/PurpleStoke" targe="_blank" rel="noopener norefereer">X</a>
+    </div>
+  </div>
+  <div>
+    <h2>Email</h2>
+    <p>thebugshub@gmail.com</p>
+  </div>
+  <div>
+    <h2>Discord</h2>
+    <p>Send me a Dm in Discord.</p>
+    <p>purplestoke#0</p>
+  </div>
+  <div class="spacerL"></div>
+</div>
+{% endblock %}

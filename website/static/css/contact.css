@@ -1,0 +1,56 @@
+
+
+.contactP {
+    text-align: center;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    color: white;
+}
+
+.contacts {
+    font-family: "typetwo";
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.contacts h2 {
+    color: #907fad;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.contacts p {
+    text-align: center;
+}
+
+.contacts a {
+    text-align: center;
+    text-decoration: None;
+    color: white;
+}
+
+.contacts a:hover {
+    color: #909fad;
+}
+
+.contactSocials {
+    display: grid;
+    grid-template-rows: 1fr;
+    gap: 0.5rem;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.spacerL {
+    height: 15rem;
+}
+
+@media screen and (max-width: 768px) {
+    .contacts {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}

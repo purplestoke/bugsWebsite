@@ -1,0 +1,154 @@
+.stoke {
+    max-width: auto;
+    margin-left: 7rem;
+    margin-right: 7rem;
+}
+
+#stokeImgInv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.inviteStokeButt {
+    margin-top: 1rem;
+    background-color: #907fad;
+    color: white;
+    border: none;
+}
+
+.inviteStokeButt a {
+    text-decoration: none;
+    color: white;
+}
+
+.inviteStokeButt a:hover {
+    color: black;
+}
+
+h1 {
+    margin-left: 5rem;
+    margin-right: 5rem;
+}
+
+.stokeImg {
+    height: 300px;
+    width: 300px;
+}
+
+h2 {
+    font-size: 2rem; 
+    text-align: center;
+    margin-left: 7rem;
+    margin-right: 7rem;
+    margin-top: 1.5rem;
+}
+
+.stokeOverviewCont {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    place-items: center;
+}
+
+.stokeOverviewCont p {
+    color: #907fad;
+    text-align: left;
+    margin-right: 7rem;
+    margin-top: 1.5rem;
+} 
+
+.profilesCont {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.profiles {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.playerProfileChannel p, .paymentVerifyChannel p, .scSubmissionChannel p, .intercomChannel p {
+    color: #907fad;
+}
+
+.playerProfileChannel h2, .paymentVerifyChannel h2, .scSubmissionChannel h2, .intercomChannel h2 {
+    text-align: center;
+}
+
+.center {
+    text-align: center;
+}
+
+.Vid {
+    margin-top: 3rem;
+    width: 375px;
+    height: auto;
+}
+
+.vidBox {
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    .stokeImg {
+        height: 150px;
+        width: 150px;
+    }
+
+    .stoke {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    .stokeOverviewCont {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        place-items: center;
+    }
+
+    .stokeOverviewCont p {
+        margin-right: 3rem;
+    }
+
+    .playerProfileChannel h3, .paymentVerifyChannel h3, .scSubmissionChannel h3 {
+        text-align: center;
+        margin-left: 3rem;
+        margin-right: 3rem;
+    }
+
+    .playerProfileChannel h2, .paymentVerifyChannel h2, .scSubmissionChannel h2 {
+        text-align: center;
+        margin-left: 3rem;
+        margin-right: 3rem;
+    }
+
+    .profilesCont {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        margin-top: 2rem;
+    }
+
+    .profiles {
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+
+    .stokeOverviewCont p {
+        margin-top: 1.5rem;
+        margin-right: 0;
+        margin-left: 0;
+        justify-content: center;
+    }
+
+    .Vid {
+        margin-top: 3rem;
+        width: 100%;
+        height: auto;
+    }
+
+}

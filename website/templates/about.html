@@ -1,0 +1,61 @@
+{% extends "base.html" %} {% block title%}thebugshub-About{% endblock %} {% block content%}
+{% block stylesheets %}
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="{{ url_for ('static', filename='css/about.css') }}"
+/>
+{% endblock %}
+
+<div class="about">
+  <h2>What is bugs?</h2>
+  <p>
+    bugs is a brand created for content creators, streamers, and communities to
+    grow and maintain their audience. <br /><br />
+    We create competition and rivalry among communities, having your members compete for
+    bragging rights and a piece of the Ethereum prize. <br><br>
+    For each game bugs supports there is an event hosted 1x a month. These events are 
+    pay to play and give the competitors an opportunity to earn their Ethereum back and some more. <br><br>
+    Leading up to the main events bugs will host smaller free-to-play events for anyone with a bugs profile to participate in. 
+    These events will not be as competitive but the top performers from these events will earn a free entry into one of the main events (The Entry Fee is paid by bugs).
+  </p>
+
+  <h2>Operations</h2>
+  <h3>Blockchain</h3>
+  <p>
+    bugs is a brand which operates using the Ethereum blockchain. All that is
+    needed to compete in bugs Events is a Discord account and Ethereum wallet address. <br /><br />
+    The blockchain is used for payment to create a bugs Profile and to compete
+    in bugs Events.<br /><br />
+    Since the blockchain is a decentralized distributed ledger, bugs has the
+    ability to authenticate and verify payments made to our Ethereum wallets. It
+    is by verifying payments that bugs is able to create its competitor list for
+    Events. <br /><br />
+    Lastly, upon creation of a bugs Profile your Ethereum wallet address is
+    saved by bugs and is used to send out Ethereum rewards in the instance you are selected as a winner.<br><br>
+    Rewards are sent out only after verifying the winners Ethereum address.
+  </p>
+
+  <h3>Discord</h3>
+  <p>
+    The Stoke bot is used to handle all information processing needed in order
+    to run bugs. In order to be able to compete in bugs events you must be a
+    member of a Discord server which has invited the Stoke bot to their
+    server.<br /><br />
+    Using Stoke, community members of a server can create a bugs profile for a
+    fee of 0.003 ETH, they also have the ability to represent the community of
+    their choosing via their player profile.<br /><br />
+    Player profiles consists of the competitors gamertag and server/community
+    they wish to represent and compete under in a bugs event. There is a player
+    profile for each game bugs supports. <br /><br />
+    Currently bugs supports 2 games Apex Legends and The Finals. So, players have
+    the option to compete for 1 community in Apex and another community in
+    The Finals. <br /><br />
+    The community you represent in the events is based on which Discord server
+    you create your player profile in. In order to change this all you need to
+    do is re-create your player profile in the Discord server you want to
+    compete under.
+  </p>
+  <br><br>
+  {% endblock %}
+</div>

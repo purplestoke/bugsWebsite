@@ -1,0 +1,6 @@
+.serverGridCont {
+    display: grid;
+    grid-template-columns: 67 33;
+    gap: 1rem;
+    margin: 2rem;
+}

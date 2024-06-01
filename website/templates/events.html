@@ -1,0 +1,355 @@
+{% extends "base.html" %} {% block title%}thebugshub-Events{% endblock %} {% block
+content%} {% block stylesheets %}
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="{{ url_for ('static', filename='css/events.css') }}"
+/>
+{% endblock %}
+
+<h1>Events</h1>
+<nav class="eventsNav">
+  <a class="finalsT" href="#finals">The Finals</a>
+  <a class="apexT" href="#apex">Apex Legends</a>
+  <a class="xdefT" href="#xdef">XDefiant</a>
+</nav>
+<div class="events">
+  <h2>bugs Profiles</h2>
+  <br />
+  <div class="duoRow">
+    <div>
+      <h3>Getting access to bugs</h3>
+      <p>
+        The only way to participate in bugs events is by being a member of a
+        community which has brought the Stoke bot into their Discord server.
+        <br /><br />
+        On this website are possible servers you could join! See
+        <a class="serversA" href="/servers">Here</a><br /><br />
+      </p>
+      <h3>Creating a bugs profile</h3>
+      <p>
+        Members of communities who have access to the Stoke bot can generate a
+        bugs profile by sending 0.003 ETH to the bugs Treasury wallet. See
+        <a class="serversA" href="/wallets">Here</a><br /><br />
+        Once sent you can then use the /bugs_profile command in the
+        player_profile channel.<br /><br />
+        This command asks for your Ethereum wallet address. You must insert the
+        same address that was used to send the 0.003 ETH. <br /><br />
+        Once sent Stoke then verifies that the address has sent the profile
+        creation fee. It is important to note that you must create your profile
+        the same day you sent the 0.003 ETH. This is because the Stoke bot will
+        only query transactions made that day. So if you made payment the day
+        before and attempt to create a profile Stoke will not verify your
+        payment.
+      </p>
+    </div>
+    <div>
+      <h3>Player Profile</h3>
+      <p>
+        The bugs profile establishes a connection between a Discord user and
+        their Ethereum wallet address. Player profiles is how bugs tracks
+        community scores in Events and authenticates that competitors
+        screenshots are their own. Your player profile is created in the Discord
+        server you will represent in the Events.
+        <br /><br />
+        Player profiles are used to identify the players in events and connect
+        them with their bugs profile via their gamertag. <br /><br />
+        This allows bugs to verify that the competitors performance is their
+        own. Because the gamertag that is given upon creation of a player
+        profile is the gamertag the Stoke bot looks for when counting scores.<br /><br />
+        Members of bugs can create a player profile for each game bugs supports.
+        Members can only update profiles if they are not currently competing in
+        an event.<br /><br />
+        A player profile is created within the community server. By doing so, the player now competes for that
+        community. If a player wants to represent a different community they can
+        re-create their player profile within that community's Discord server.
+      </p>
+    </div>
+  </div>
+
+  <h2>Winners</h2>
+  <div class="winners">
+    <h3>10% Of Competitors Chosen</h3>
+    <p>
+      For every pay-to-play event hosted by bugs 10% of competitors will be chosen to 
+      evenly split 60% of the total Ethereum generated in an event. Let's give an example. <br /><br />
+      If there are 75 competitors in a bugs event a total of 0.375 ETH is generated (0.005 Eth Event Entry Fee)<br /><br />
+      10% of Event Entry fee's is earned by competing communities. When you pay 0.005 ETH to participate under community X's banner,
+      community X retains 0.0005 ETH from that Event Entry Fee. <br /><br />
+      20% of the Eth generated will be awarded to 1 competitor within the community with the top Average score. In this example that lucky individual
+      would be awarded .075 ETH. <br /><br />
+      10% of Eth generated is retained by bugs. In this example bugs would retain .0375 ETH. <br /><br />
+      So we have, <br />0.0375 ETH dispersed among competing communities <br />0.075 ETH awarded to a competitor within the top Average scoring community<br />
+      0.0375 ETH retained by bugs <br /><br />
+      Leaving 0.225 ETH to be split evenly among 10% of competitors.<br /><br />
+      10% of 75 is 7.5, bugs ALWAYS ROUNDS DOWN in this instance so, 7 competitors will split the 0.225 ETH. <br />
+      Which means 7 competitors will earn a total of roughly 0.032 ETH.
+    </p>
+  </div>
+
+  <h2>Event Games</h2>
+  <div class="finals">
+    <h3 id="finals" class="finalsT">The Finals</h3>
+    <h4>Overview</h4>
+    <p>
+      Players in The Finals events must compete in a tournament mode. Playing in
+      ranked will not have any affect on the competitors score (Although at times Ranked may be the only mode available if Tournaments are not in Matchmaking). The event will
+      start at 10:00 am PST and ends at 10:00 pm PST. In that time players must
+      play a tournament and save a screenshot of the leaderboard at the very end
+      of the tournament. <br /><br />
+      NOTE * see picture for an example of the screenshot, bugs will not accept
+      screenshots that display the leaderboard of an individual round, the
+      screenshots accepted are those that have the total scores across all
+      rounds in the tournament. <br /><br />
+      ALSO NOTE * You do not have to win a tournament in order to submit a screenshot. <br /><br />
+      From that screenshot a point total is applied using the following;<br /><br />
+      Total cash from cashouts<br />
+      Individual Combat Score<br />
+      Individual Objective Score<br />
+      Individual Support Score
+    </p>
+    <div class="eventGridCont">
+      <div class="eventCol">
+        <h4>Points</h4>
+        <p>
+          A competitors points are earned from the following criteria;<br /><br />
+          Total cash extracted <br />
+          Combat Score<br />
+          Objective Score<br />
+          Support Score<br /><br />
+          From these criteria a competitor is given 1 point per 1,000 rounded to
+          the nearest tenth. And the sum of those numbers is rounded to the
+          nearest whole number. <br /><br />
+          From the example of a leaderboard screenshot a point total of 134 is
+          given.<br />
+          97.2 pts for cash extracted <br />
+          16.9 pts for combat score <br />
+          7.6 pts for objective score<br />
+          12.7 pts for support score <br /><br />
+          When tallied this earns a total of 134.4 and rounded to the nearest
+          whole number a total of 134 pts is awarded.
+        </p>
+      </div>
+      <div class="eventCol">
+        <h4>Leaderboard Screenshot Example</h4>
+        <br />
+        <div class="pointCont">
+          <img
+            class="pointsImg"
+            src="{{ url_for ('static', filename='/media/finalsImg.jpg')}}"
+          />
+        </div>
+      </div>
+      <div class="eventCol">
+        <h4>Selecting Winners</h4>
+        <p>
+          Competitors in a Finals event are first placed into brackets. Brackets
+          are organized by the competitors points earned. There is a total of 4
+          brackets each of which has an initial draw percentage. <br /><br />
+          So, when a winner is chosen first the bracket is chosen and then an
+          individual within that bracket is chosen. Your score in the event not
+          only determines the bracket you are placed in, but also determines
+          your odds for being drawn within the bracket.<br /><br />
+          For example, from the image below we see that the silver bracket will
+          consist of competitors who scored 66 - 116 pts. Now, someone that
+          scored 100 points will have a higher chance of being drawn then
+          someone who scored 80 pts. These odds are determined by your
+          percentage of points compared to the total amount of points within the
+          bracket.
+        </p>
+        <div class="pointCont">
+          <img
+            class="apexBracketImg"
+            src="{{ url_for ('static', filename='/media/finals_brackets.jpg')}}"
+          />
+        </div>
+      </div>
+      <div class="eventCol">
+        <h4>Community Winner</h4>
+        <p>
+          As Stoke counts scores individually for competitors, the bot also
+          totals Average scores for communities. <br /><br />
+          The community with the top Average score is awarded 20% of the total
+          ETH generated from the event. <br /><br />
+          As a result of winning, one competing member of that community will be selected at random
+          to be awarded the 20% of ETH generated. A competitors score has no affect on the chance
+          of being drawn for this reward.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="apex">
+    <h3 id="apex" class="apexT">Apex Legends</h3>
+    <h4>Overview</h4>
+    <p>
+      Players in Apex Legends events compete solo, this means only your score is
+      counted towards the event not your overall team score. The event starts at
+      10:00 am PST and ends at 10:00 pm PST. In that time players must play a
+      game of Apex Legends BR (duo or trio) and send their match summary
+      screenshot to the Stoke bot. <br /><br />
+      Based off your placement, kills, and damage you will be awarded a score. A
+      perfect score in Apex is; <br /><br />
+      1st place, 15 kills, and 4k damage. Earning 140 points.<br /><br />
+      Your performance in the event will affect your odds of being drawn for the
+      prize. Anyone who participates by sending a match summary screenshot will
+      have a chance to win the Ethereum prize. Those that perform well will have
+      a higher chance of being drawn.
+    </p>
+    <div class="eventGridCont">
+      <div class="eventCol">
+        <h4>Points</h4>
+        <p>Points can be explained by the image below.<br /><br /></p>
+        <div class="pointCont">
+          <img
+            class="pointsImg"
+            src="{{ url_for ('static', filename='/media/apex_points.jpg')}}"
+          />
+        </div>
+      </div>
+      <div class="eventCol">
+        <h4>Match Summary Screenshot</h4>
+        <p>
+          Now here is an example of Match Summary screenshot that competitors
+          must send in their community's Discord server in the #sc_submission
+          channel.
+          <br /><br />Note that I have blocked out the other players in the
+          game, this is not neccessary for your screenshots.
+        </p>
+        <div class="apexScCont">
+          <img
+            class="apexSc"
+            src="{{ url_for ('static',
+          filename='/media/apex_sc.png')}}"
+          />
+        </div>
+        <p>From this screenshot 71pts would be earned.</p>
+      </div>
+      <div class="eventCol">
+        <h4>Selecting Winners</h4>
+        <p>
+          Competitors in a Apex event are first placed into brackets. Brackets
+          are organized by the competitors points earned. There is a total of 4
+          brackets each of which has an initial draw percentage. <br /><br />
+          When a winner is chosen, first the bracket is chosen and then an
+          individual within that bracket is chosen. Your score in the event not
+          only determines the bracket you are placed in, but also determines
+          your odds for being drawn within the bracket.<br /><br />
+          For example, from the image below we see that the silver bracket will
+          consist of competitors who scored 36 - 70 pts. Now, someone that
+          scored 65 points will have a higher chance of being drawn then
+          someone who scored 45 pts. These odds are determined by your
+          percentage of points compared to the total amount of points within the
+          bracket.
+        </p>
+        <div class="apexBracketCont">
+          <img
+            class="apexBracketImg"
+            src="{{ url_for ('static', filename='/media/apex_brackets.jpg')}}"
+          />
+        </div>
+      </div>
+      <div class="eventCol">
+        <h4>Community Winner</h4>
+        <p>
+          As Stoke counts scores individually for competitors, the bot also
+          totals Average scores for communities. <br /><br />
+          The community with the top Average score is awarded 20% of the total
+          ETH generated from the event. <br /><br />
+          As a result of winning, one competing member of that community will be selected at random
+          to be awarded the 20% of ETH generated. A competitors score has no affect on the chance
+          of being drawn for this reward.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="xdef">
+    <h3 id="xdef" class="xdefT">XDefiant</h3>
+    <h4>Overview</h4>
+    <p>
+      Players in XDefiant events can compete in any game mode they choose. At the end of a 
+      match competitors must take a screenshot of the leaderboard and submit it to the 
+      #sc_submission channel in the Discord community they are competing under. From that 
+      screenshot the competitor will earn a point total placing them in a bracket, which 
+      will determine their chance of being drawn for the Ethereum prize. <br/> <br/>
+      Competitors have from 10:00 AM - 10:00 PM PST to submit their screenshot and be 
+      elligible to earn the prize. <br/><br/>
+      Points are tallied from the following; <br/>
+      Kills <br/>
+      Deaths <br/>
+      Objective score <br/>
+      Support score <br/>
+      Damage
+    </p>
+    <div class="eventGridCont">
+      <div class="eventCol">
+        <h4>Points</h4>
+        <p>Points are earned from the following in a leaderboard screenshot; <br/><br/>
+          Kills <br/>
+          Deaths <br/>
+          Objective score <br/>
+          Support score <br/>
+          Damage <br/><br/>
+          To calculate points the Stoke bot will take your KD and multiply it by the sum of
+          your kills, objective score, support score and damage. <br/><br/>
+          Stoke then multiplies that number by 0.1 and rounds it to the nearest whole number
+          to get a competitors score. <br/><br/>
+          From that score the competitor is then placed in either the Bronze, Silver, Gold or Buggin
+          bracket.
+          
+        </p>
+      </div>
+      <div class="eventCol">
+        <h4>Match Summary Screenshot</h4>
+        <p>
+          Now here is an example of Match Summary screenshot that competitors
+          must send in their community's Discord server in the #sc_submission
+          channel.
+        </p>
+        <div class="apexScCont">
+          <img
+            class="apexSc"
+            src="{{ url_for ('static',
+          filename='/media/XdefSc.png')}}"
+          />
+        </div>
+        <p>From this screenshot 661pts would be earned.</p>
+      </div>
+      <div class="eventCol">
+        <h4>Selecting Winners</h4>
+        <p>
+          Competitors in a XDefiant event are first placed into brackets. Brackets
+          are organized by the competitors points earned. There is a total of 4
+          brackets each of which has an initial draw percentage. <br /><br />
+          When a winner is chosen, first the bracket is chosen and then an
+          individual within that bracket is chosen. Your score in the event not
+          only determines the bracket you are placed in, but also determines
+          your odds for being drawn within the bracket.<br /><br />
+          For example, from the image below we see that the silver bracket will
+          consist of competitors who scored 503 - 1005 pts. Now, someone that
+          scored 900 points will have a higher chance of being drawn then
+          someone who scored 650 pts. These odds are determined by your
+          percentage of points compared to the total amount of points within the
+          bracket.
+        </p>
+        <div class="apexBracketCont">
+          <img
+            class="apexBracketImg"
+            src="{{ url_for ('static', filename='/media/xdef_brackets.jpg')}}"
+          />
+        </div>
+      </div>
+      <div class="eventCol">
+        <h4>Community Winner</h4>
+        <p>
+          As Stoke counts scores individually for competitors, the bot also
+          totals Average scores for communities. <br /><br />
+          The community with the top Average score is awarded 20% of the total
+          ETH generated from the event. <br /><br />
+          As a result of winning, one competing member of that community will be selected at random
+          to be awarded the 20% of ETH generated. A competitors score has no affect on the chance
+          of being drawn for this reward.
+        </p>
+      </div>
+    </div>
+</div>  
+{% endblock %}

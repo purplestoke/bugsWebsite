@@ -1,0 +1,140 @@
+{% extends "base.html" %} {% block title%}thebugshub-Stoke{% endblock %} {% block content%}
+{% block stylesheets %} 
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="{{ url_for ('static', filename='css/stoke.css') }}"
+/>
+{% endblock %}
+
+<h1>Stoke Bot</h1>
+<div class="stoke">
+  <h2>Overview</h2>
+  <div class="stokeOverviewCont">
+    <div id="stokeImgInv">
+      <img
+        class="stokeImg"
+        src="{{ url_for ('static', filename='media/stoke.png')}}"
+      />
+    </div>
+    <p>
+      Stoke handles all information processing for bugs events. From creating,
+      updating, or deleting profiles. To verifying payment and drawing
+      winners.<br /><br />
+      Anybody with a Discord Server is able to invite Stoke into their server after contacting purplestoke. 
+      Note that your Discord Server must have a minumum of 50 members. 
+      Once invited Stoke will automatically create a bugs category in
+      your Discord server. In that category Stoke creates 3 channels.
+      <br /><br />
+      #buggin<br />#sc_submission<br />#intercom
+      <br /><br />
+      Along with the channels Stoke creates 3 roles within the server.
+      <br /><br />
+      apex<br />finals<br/>competitor<br /><br />
+      The channels and roles will be explained below along with the slash
+      commands of the Stoke bot.
+    </p>
+  </div>
+
+  <div class="playerProfileChannel">
+    <h2>#buggin</h2>
+    <p class="center">
+      The buggin channel is accessible to anyone in the server. Inside
+      this channel users can create, delete, update, or retrieve their bugs
+      and player profiles. Inside this channel users will also verify payments made to bugs events.
+    </p>
+    <div class="profilesCont">
+      <div class="profiles">
+        <h3>bugs Profile</h3>
+        <p>
+          A bugs profile is mandatory in order to compete in bugs events. After
+          creating a bugs profile users can then create their player
+          profiles.<br /><br />
+          Users create a bugs profile by sending 0.003 Eth to the bugs Treasury
+          wallet. After sending payment the user can then hop into Discord and
+          use the /bugs command. <br /><br />
+          After using /bugs a dropdown menu will appear asking the user if they would like to
+          Create, Delete, Update or Retrieve their bugs profile. <br /><br />
+          If a user would like to update their profile to have a new Ethereum address they will have 
+          to send another 0.003 ETH to the bugs Treasury wallet from that new address.
+        </p>
+        <div class="vidBox">
+          <video class="Vid" controls>
+            <source src="{{ url_for('static', filename='media/bugsProfileCreate.mp4')}}" type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <div class="profiles">
+        <h3>Player Profiles</h3>
+        <p>
+          Player profiles are comprised of the users gamertag for a specific game. Users of bugs can
+          create a player profile for each game bugs supports. A bugs profile is
+          required in order to create a player profile. <br /><br />
+          Player profiles are created within Discord using the /player
+          command in the #buggin channel.<br /><br />
+          The server in which a user creates a player profile is the
+          server/community they will represent in the events for that specific
+          game. Users can update what community they represent by re-creating
+          their player profile in that community's Discord Server. <br /><br />
+          After using /player a dropdown menu will appear asking the user if they would like
+          to Create, Delete or Retrieve their player profile.<br /><br />
+          If a user would like to update their player profile to have a different gamertag they can
+          do so by using the Create option. Also note users will be unable to Delete or Update their profiles
+          if they are currently competing in an event.
+        </p>
+        <div class="vidBox">
+          <video class="Vid" controls>
+            <source src="{{ url_for('static', filename='media/playerProfileCreate.mp4')}}" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="paymentVerifyChannel">
+    <h2>Verifying Payment to Events</h2>
+    <p class="center">
+      After creating a bugs and player profile a user can then send 0.005 ETH to a bugs event wallet within the payment deadline.
+      Users will use the command /payment in the #buggin channel, a dropdown menu will appear asking
+      the user which event they would like to verify payment for.<br /><br />
+      Using this command Stoke pulls your Ethereum address from your bugs profile
+      and queries the blockchain for a payment made to the event wallet for the
+      entry cost amount. If Stoke finds the payment then the user is assigned
+      the competitor role and is elligible to compete in the bugs event. Having the competitor role
+      allows a user to send their match summary screenshot in the #sc_submission channel.
+    </p>
+    <div class="vidBox">
+      <video class="Vid" width="375" controls>
+        <source src="{{ url_for('static', filename='media/PmntVerify.mp4')}}" type="video/mp4">
+      </video>
+    </div>
+  </div>
+  <div class="scSubmissionChannel">
+    <h2>#sc_submission</h2>
+    <p class="center">
+      The #sc_submission channel is only available to server members who have
+      verified payment to an event and earned the competitor role. Inside this
+      channel competitors of a bugs event can post their Match Summary or
+      Leaderboard screenshot (Apex Legends or The Finals). <br /><br />
+      No command is required, users will simply post the image in the channel
+      and Stoke will handle the rest notifying the user that their screenshot
+      has been saved along with how many points they scored from the screenshot. <br /><br />
+      If a user has already submitted a screenshot and wants to submit another they will simply
+      post that screenshot in the #sc_submission channel and Stoke will ask the user if they would
+      like to keep their previous submission or replace the previous with the new.<br /><br />
+    </p>
+    <div class="vidBox">
+      <video class="Vid" width="375" controls>
+        <source src="{{ url_for('static', filename='media/ScSubmission.mp4')}}" type="video/mp4">
+      </video>
+    </div>
+  </div>
+  <div class="intercomChannel">
+    <h2>#intercom</h2>
+    <p class="center">
+      The #intercom channel is where users can look for all announcements coming
+      from bugs. This include payment deadlines, winning guilds of events and the individual winners.
+    </p>
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,23 @@
+p {
+    text-align: center;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    margin-top: 2rem;
+}
+
+.spacerL {
+    height: 15rem;
+}
+
+.purplstokePBlock {
+    margin-left: 5rem;
+    margin-right: 5rem;
+    justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+    .purplstokePBlock {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+}

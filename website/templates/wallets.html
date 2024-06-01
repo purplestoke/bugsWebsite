@@ -1,0 +1,44 @@
+{% extends "base.html" %} {% block title%}thebugshub-Wallets{% endblock %} {% block
+content%} {% block stylesheets %}
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="{{ url_for ('static', filename='css/wallets.css') }}"
+/>
+{% endblock %}
+<h1>Wallets</h1>
+<h2>Found on this page are all bugs wallets and their events.</h2>
+<div class="walletCont">
+  <div class="mainWallet">
+    <h2 class="walletM">bugs Treasury</h2>
+    <p>
+      The bugs Treasury is used to send payment for bugs profile creation and
+      to update a bugs profile.
+      <br /><br />
+      Users will send 0.003 Eth to the Treasury wallet in order for
+      Stoke to create or update a bugs profile.
+      <br /><br />
+      Profiles must be created the same day payment is sent. Stoke only queries payments made on
+      the current day.
+    </p>
+    <h4>0x5e8a3bf9404fc7adb819e4386807b8ba015e8e72</h4>
+  </div>
+  <div class="apexWallet">
+    <h2 class="apexText">Apex Event Wallet</h2>
+    <p>
+      Competitors will send the Event Entry Fee to the Apex Event Wallet in order to
+      compete in Apex events. <br /><br />Payment must be sent within the payment deadline.
+    </p>
+    <h4>0x5e8a3bf9404fc7adb819e4386807b8ba015e8e72</h4>
+  </div>
+  <div class="finalsWallet">
+    <h2 class="finalsText">The Finals Event Wallet</h2>
+    <p>
+      Competitors will send the Event Entry Fee to The Finals Event Wallet in order
+      to compete in The Finals events. <br /><br />Payment must be sent within the payment deadline.
+    </p>
+    <h4>0x5e8a3bf9404fc7adb819e4386807b8ba015e8e72</h4>
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,213 @@
+h1 {
+    margin-left: 5rem;
+    margin-right: 5rem;
+    justify-content: center;
+}
+
+.duoRow {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-left: 5rem;
+    margin-right: 5rem;
+}
+
+.duoRow p {
+    margin: 1rem !important; 
+}
+
+.events h2 {
+    font-size: 2rem; 
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+.events h3 {
+    color: #909fad;
+    text-align: left;
+    margin-left: 7rem;
+    margin-top: 0.7rem;
+}
+ 
+.events p {
+    color: #907fad;
+    text-align: left;
+    margin-left: 7rem;
+    margin-right: 7rem;
+}
+
+.events h4 {
+    color: white;
+    text-align: left;
+    margin-top: 0.5rem;
+    margin-left: 7rem;
+    font-size: 1.2rem;
+}
+
+.serversA {
+    color: white;
+}
+
+.finalsT {
+    color: #e4ba3f !important;
+}
+.apexT {
+    color: #fe0000 !important;
+}
+
+#finals {
+    justify-content: center;
+    font-size: 3rem;
+}
+
+#apex{
+    justify-content: center;
+    font-size: 3rem;
+}
+
+.pointCont {
+    margin-left: 7rem;
+    margin-right: 7rem;
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+ .pointsImg {
+    height: 226.38px;
+    width: 383.46px;
+}
+
+.apexScCont {
+    margin-left: 7rem;
+    margin-right: 7rem;
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+.apexSc {
+    height: 180px;
+    width: 320px;
+}
+
+.apexBracketCont {
+    text-align: center;
+    margin-left: 7rem;
+    margin-right: 7rem;
+    margin-top: 1.5rem;
+}
+
+.apexBracketImg {
+    height: 300px;
+    width: 300px;
+}
+
+.eventsNav {
+    background: none;
+    margin-top: 0.5rem;
+}
+
+.eventsNav a:hover {
+    background: #907fad;
+}
+
+.xdefT {
+    color: #d5ba50 !important;
+}
+
+#xdef {
+    justify-content: center;
+    font-size: 3rem;
+    margin-top: 3rem;
+}
+
+.xdefScCont {
+    text-align: center;
+    margin-left: 7rem;
+    margin-right: 7rem;
+    margin-top: 1.5rem;
+}
+
+.xdefScImg {
+    height: 216px;
+    width: 384px;
+}
+
+.eventGridCont {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.xdefBracketImg {
+    height: 300px;
+    width: 300px;
+    text-align: center;
+    margin-left: 7rem;
+    margin-right: 7rem;
+    margin-top: 1.5rem;
+}
+
+
+@media screen and (max-width: 768px) {
+    .events p {
+        margin-left: 3rem;
+        margin-right: 3rem;
+    }
+    .events h3 {
+        text-align: center;
+        margin-bottom: 1rem;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .events h4 {
+        text-align: center;
+        margin-bottom: 1rem;
+        margin-left: 0;
+        margin-right: 0;  
+    }
+    .pointsImg {
+        height: 113.19px;
+        width: 191.73px;
+    }
+    .apexSc {
+        height: 90px;
+        width: 160px;
+    }
+    .apexBracketImg {
+        height: 200px;
+        width: 200px;
+    }
+    .xdefBracketImg {
+        height: 200px;
+        width: 200px;
+    }
+    .eventGridCont {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        width: auto;
+    }
+    .apexScCont, .pointCont, .apexBracketCont, .xdefScCont {
+        justify-content: center;
+        margin-left: 3rem;
+        margin-right: 3rem;
+    }
+
+    .xdefScImg {
+        height: 108px;
+        width: 192px;
+    }
+
+    .duoRow {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin-left: 3rem;
+        margin-right: 3rem;
+    }
+    
+    .duoRow p {
+        margin: 1rem !important; 
+    }
+
+}

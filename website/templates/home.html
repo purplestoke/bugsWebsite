@@ -1,0 +1,95 @@
+{% extends "base.html" %} {% block title%}thebugshub-Home{% endblock %} {% block content%}
+{% block stylesheets %}
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="{{ url_for ('static', filename='css/home.css') }}"
+/>
+{% endblock %}
+<div class="logoContainer">
+  <img
+    class="logo"
+    src="{{ url_for ('static', filename='media/bugs_logo.png') }}"
+  />
+</div>
+
+<div class="home">
+  <h2 class="logoH2">The Hub of Competitive Gaming</h2>
+  <h2 class="purple">Compete in events under a community banner</h2>
+  <h2 class="purple">Compete with Ethereum for Ethereum</h2>
+  <h2 class="purple">
+    Anybody has a chance to win, but performance affects chance
+  </h2>
+  <p class="purple homeP">
+    After every bugs Event 10% of competitors selected split 60% of all Ethereum
+    generated from Event Entry Cost Fees. <br /><br />
+    20% of Ethereum generated goes to a lucky winner from the community with the highest average score. <br /><br />
+    10% of Event Entry Cost Fees are given to participating communitys (per
+    competitor)<br /><br />
+    The last 10% is retained by bugs.
+  </p>
+
+  <div class="mission">
+    <h1>What we do</h1>
+    <p>
+      bugs is a brand for content creators, streamers and communities. We give
+      these communities the option to participate in bugs Events using the
+      Discord bot, Stoke. <br /><br />
+      Those who invite the Stoke bot into their server give their community
+      members the option to compete in a bugs event, where they not only compete
+      for themselves but for their community as well. <br /><br />
+      All you need to compete in a bugs Event is a Discord account and Ethereum
+      wallet. <br /><br />
+      Note* bugs DOES NOT support hosted wallets 
+    </p>
+  </div>
+
+  <div class="supportedGames">
+    <h1>Supported Games</h1>
+    <div class="duoRow">
+      <div class="apexHome">
+        <h3 class="apexText">Apex Legends</h3>
+        <p>
+          Compete in Apex Legends events for a shot at an Ethereum prize!
+          <br /><br />
+          Competitors have 12 hours to play Apex and post 1 Match Summary
+          Screenshot in their community's Discord server. <br /><br />
+          From that screenshot a point total is tallied based off a
+          competitor's;<br />
+          Placement<br />
+          Kills<br />
+          Damage <br /><br />
+          Any competitor in bugs Events have a chance at winning the Eth prize!
+          However the competitors skill will greatly impact their odds of
+          winning.
+        </p>
+        <p>
+          For more information see
+          <a class="eventsA" href="/events">Events</a>
+        </p>
+      </div>
+      <div class="xdefHome">
+        <h3 class="finalsText">The Finals</h3>
+        <p>
+          Compete in The Finals events for a shot at an Ethereum prize!
+          <br /><br /> 
+          Competitors have 12 hours to play The Finals and post 1 Leaderboard
+          Screenshot in their community's Discord server. <br /><br />
+          From that screenshot a point total is tallied based off a competitors;<br> 
+          Total Cash Extracted<br> 
+          Combat-Score<br> 
+          Support-Score<br>
+          Objective-Score.<br /><br />
+          Any competitor in bugs Events have a chance at winning the Eth prize!
+          However the competitors skill will greatly impact their odds of
+          winning.
+        </p>
+        <p>
+          For more information see
+          <a class="eventsA" href="/events">Events</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
